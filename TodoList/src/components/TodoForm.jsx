@@ -1,19 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function TodoForm() {
-  const [input, setInput] = useState();
-
   return (
-    <form className='todo-form'>
-      <input 
-        type="text" 
-        placeholder='Add a ' 
-        value={input} 
-        name='text' 
-        className='todo-input'
-      />
-      <button className='todo-button'> Add todo</button>
-    </form>
+    <div className='Todo--form'>
+      <h2>Criar Tarefa:</h2>
+      <form >
+        <input type="text" placeholder='Digite a tarefa'/>
+        <select>
+          <option value="">Selecione uma categoria</option>
+          <option value="">Trabalho</option>
+          <option value="">Pessoal</option>
+          <option value="">Estudos</option>
+        </select>
+        <button>Criar Tarefa</button>
+      </form>
+    </div>
   )
 }
 
