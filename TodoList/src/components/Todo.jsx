@@ -22,6 +22,7 @@ Todo.propTypes = {
     text: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
+    isCompleted: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
