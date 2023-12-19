@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+html{
+  padding: 0;
+  margin: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,89,209,1) 0%, rgba(0,255,252,1) 100%);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(241, 241, 241);
+  -webkit-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.4);
+  -moz-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.4);
+  box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.4);
+}
+
+.Todo--form, .Todo{
+  width: 500px;
+}
+
+.Filters{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.Filter--select{
+  display: flex;
+  height: 30px;
+  align-items: center;
+  gap: 10px;
+}
+
+select, button{
+  font-family: 'Montserrat', sans-serif;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #f3f3f3;
+  background-position: 218px center;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  padding-left: 10px;
+}
+
+.Todo--create{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Todo--create input, .Search input{
+  height: 20px;
+  display: block;
+  height: 100%;
+  border: none;
+  padding-left: 10px;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+  max-width: 500px;
+  height: 40px;
+}
+
+button{
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+  height: 44px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.Todo, .Todo--content{
+  padding: 0 10px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff!important;
+  border-radius: 5px;
+}
+
+.Todo--content{
+  gap: 20px;
+}
+
+.Todo--buttons{
+  gap: 10px;
+  display: flex;
+  width: 250px;
+  align-items: center;
+}
+
+.Button--remove{
+  width: 55px;
+  background: #e26c6c;
+}
+
+.Button--complete{
+  background: #6ce286;
+}
+
+.Todo--content p{
+  width: 120px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  html{
+    background: rgb(241, 241, 241);
+  }
+
+  .App {
+    width: 90%;
+    height: 100vh;
+    box-shadow: none;
+    }
+
+  
+  .Todo {
+    width: 90%;
+  }
+
+  .Filters{
+    width: 100%;
+  }
+
+
+  select {
+    background-position: 90% center;
+  }
+
+  .Todo--create input
+   {
+    max-width: 100%;
+  }
+
+  .Search input{
+    max-width: 70%;
+  }
+
+  button {
+    height: 50px;
+  }
+
+  .Todo,
+  .Todo--content {
+    flex-direction: column;
+  }
+
+  .Todo--content p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Todo--buttons{
+    margin: 10px;
+  }
+}
